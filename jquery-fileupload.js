@@ -83,7 +83,7 @@
             var self = event.data.context;
 
             // Run the before callback
-            self.settings.before();
+            if(!self.settings.before()) return;
 
             // Declare a form data object
             var data = new FormData();
